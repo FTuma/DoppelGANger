@@ -56,7 +56,7 @@ if __name__ == "__main__":
         os.makedirs(sample_dir)
     time_path = "./test/time.txt"
     epoch = 400
-    batch_size = 100
+    batch_size = 2048
     vis_freq = 200
     vis_num_sample = 5
     d_rounds = 1
@@ -67,8 +67,8 @@ if __name__ == "__main__":
     extra_checkpoint_freq = 5
     num_packing = 1
 
-    run_config = tf.ConfigProto()
-    with tf.Session(config=run_config) as sess:
+    run_config = tf.compat.v1.ConfigProto()
+    with tf.compat.v1.Session(config=run_config) as sess:
         gan = DoppelGANger(
             sess=sess,
             checkpoint_dir=checkpoint_dir,
