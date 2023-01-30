@@ -18,9 +18,10 @@ DoppelGANger has been used by several independent users/companies. Check the fol
 
 * Hazy: (1) [Hazy builds on new technique to generate sequential and time‑series synthetic data](https://hazy.com/blog/2020/07/09/how-to-generate-sequential-data), (2) [Generating Synthetic Sequential Data using GANs](https://medium.com/towards-artificial-intelligence/generating-synthetic-sequential-data-using-gans-a1d67a7752ac)
 * Boogie: [Synthesizing series of transactions with a Generative Adversarial Network](https://blog.boogiesoftware.com/2020/02/synthesizing-series-of-transactions.html)
+* Gretel.ai: [Generate Synthetic Time-series Data with Open-source Tools](https://www.kdnuggets.com/2022/06/generate-synthetic-timeseries-data-opensource-tools.html)
 
 ---
-This repo contains the codes of DoppelGANger. The codes were tested under Python 2.7.5 and Python 3.5.2, TensorFlow 1.4.0.
+This repo contains the codes of DoppelGANger. The codes were tested under Python 2.7.5 and Python 3.5.2, TensorFlow 1.4.0 (but should also work for all Tensorflow 1.4.0 - 1.15).
 
 ## Dataset format
 Note that `metadata` in the paper are denoted as `attribute` in the code; `measurement` in the paper are denoted as `feature` in the code.
@@ -95,6 +96,24 @@ Put your data with the desired attribute distribution in `data/web_retraining`, 
 cd example_retraining_attribute
 python main.py
 ```
+
+### Differentially private (DP) version
+To run the differentially private version of DoppelGANger (Section 6.2 in the [paper](http://arxiv.org/abs/1909.13403)), please first install [TensorFlow Privacy library](https://github.com/tensorflow/privacy).
+
+* Train DP DoppelGANger
+
+```
+cd example_dp_training
+python main.py
+```
+
+* Generate data by DP DoppelGANger
+
+```
+cd example_dp_generating_data
+python main_generate_data.py
+```
+
 ### Customize DoppelGANger
 You can play with the configurations (e.g., whether to have the auxiliary discriminator) in `config*.py`.
 
