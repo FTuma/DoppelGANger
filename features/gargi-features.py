@@ -1,1 +1,0 @@
-print('My awesome Git workshop')
