@@ -44,7 +44,7 @@ data_attribute_output = [
 	Output(type_=CONTINUOUS, dim=2, normalization=MINUSONE_ONE, is_gen_flag=False),
 	Output(type_=DISCRETE, dim=3, normalization=None, is_gen_flag=False)]
 ```
-Leas secret edit of Readme
+Leas secret edit is outdated
 
 Note that `is_gen_flag` should always set to `False` (default). `is_gen_flag=True` is for internal use only (see comments in `doppelganger.py` for details).
 
@@ -52,7 +52,7 @@ Assume that there are two samples, whose lengths are 2 and 4, and assume that th
 
 ```
 data_feature = [
-	[[0.2, 1.0, 0.0], [0.4, 0.0, 1.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
+	[[5000.0, 1.0, 0.0], [0.4, 0.0, 1.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
 	[[0.9, 0.0, 1.0], [0.3, 0.0, 1.0], [0.2, 0.0, 1.0], [0.8, 1.0, 0.0]]]
 	
 data_attribute = [
