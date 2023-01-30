@@ -1,5 +1,5 @@
 # Using GANs for Sharing Networked Time Series Data: Challenges, Initial Promise, and Open Questions
-
+# Nargess
 Previous title:
 **Generating High-fidelity, Synthetic Time Series Datasets with DoppelGANger**
 
@@ -9,7 +9,7 @@ Previous title:
 **[[code](https://github.com/fjxmlzn/DoppelGANger)]**
 
 
-**Authors:** [Zinan Lin (CMU)](http://www.andrew.cmu.edu/user/zinanl/), [Alankar Jain (CMU)](https://www.linkedin.com/in/alankar-jain-5835ab5a/), [Chen Wang (IBM)](https://wangchen615.github.io/), [Giulia Fanti (CMU)](https://www.andrew.cmu.edu/user/gfanti/), [Vyas Sekar (CMU)](https://users.ece.cmu.edu/~vsekar/)
+**Authors:** [Zinan Lin (CMU)](http://www.andrew.cmu.edu/user/zinanl/), [Alankar Jain (CMU)](https://www.linkedin.com/in/alankar-jain-5835ab5a/), [Chen Wang (IBM)](https://wangchen615.github.io/), [Giulia Fanti (CMU)](https://www.andrew.cmu.edu/user/gfanti/), [Vyas Sekar (CMU)](https://users.ece.cmu.edu/~vsekar/) Gargi Nirmal
 
 **Abstract:** Limited data access is a longstanding barrier to data-driven research and development in the networked systems community. In this work, we explore if and how generative adversarial networks (GANs) can be used to incentivize data sharing by enabling a generic framework for sharing synthetic datasets with minimal expert knowledge. As a specific target, our focus in this paper is on time series datasets with metadata (e.g., packet loss rate measurements with corresponding ISPs). We identify key challenges of existing GAN approaches for such workloads with respect to fidelity (e.g., long-term dependencies, complex multidimensional relationships, mode collapse) and privacy (i.e., existing guarantees are poorly understood and can sacrifice fidelity). To improve fidelity, we design a custom workflow called DoppelGANger (DG) and demonstrate that across diverse real-world datasets (e.g., bandwidth measurements, cluster requests, web sessions) and use cases (e.g., structural characterization, predictive modeling, algorithm comparison), DG achieves up to 43% better fidelity than baseline models. Although we do not resolve the privacy problem in this work, we identify fundamental challenges with both classical notions of privacy and recent advances to improve the privacy properties of GANs, and suggest a potential roadmap for addressing these challenges. By shedding light on the promise and challenges, we hope our work can rekindle the conversation on workflows for data sharing.
 
@@ -44,6 +44,7 @@ data_attribute_output = [
 	Output(type_=CONTINUOUS, dim=2, normalization=MINUSONE_ONE, is_gen_flag=False),
 	Output(type_=DISCRETE, dim=3, normalization=None, is_gen_flag=False)]
 ```
+Leas secret edit is outdated
 
 Note that `is_gen_flag` should always set to `False` (default). `is_gen_flag=True` is for internal use only (see comments in `doppelganger.py` for details).
 
@@ -51,7 +52,7 @@ Assume that there are two samples, whose lengths are 2 and 4, and assume that th
 
 ```
 data_feature = [
-	[[0.2, 1.0, 0.0], [0.4, 0.0, 1.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
+	[[5000.0, 1.0, 0.0], [0.4, 0.0, 1.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
 	[[0.9, 0.0, 1.0], [0.3, 0.0, 1.0], [0.2, 0.0, 1.0], [0.8, 1.0, 0.0]]]
 	
 data_attribute = [
