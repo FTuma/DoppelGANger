@@ -3,7 +3,7 @@
 Previous title:
 **Generating High-fidelity, Synthetic Time Series Datasets with DoppelGANger**
 
-**[[paper (arXiv)](http://arxiv.org/abs/1909.13403)]**
+Felix1**[[paper (arXiv)](http://arxiv.org/abs/1909.13403)]**
 **[[paper (IMC 2020, Best Paper Finalist)](https://doi.org/10.1145/3419394.3423643)]**
 **[[talk](https://dl.acm.org/doi/10.1145/3419394.3423643)]**
 **[[code](https://github.com/fjxmlzn/DoppelGANger)]**
